@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Desenvolvedor M3</title>
   <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 </head>
 
 <body>
@@ -19,10 +20,11 @@
     </div>
   </header>
   <!-- END - Header -->
+
   <!-- START - Main -->
   <main class="main-content">
     <!-- START - Filter Mobile -->
-    <aside class="area-order-mobile">
+    <div class="area-order-mobile">
       <div class="header-order-mobile">
         <span>ORDENAR</span>
         <button class="close-order">
@@ -30,12 +32,12 @@
         </button>
       </div>
       <div class="main-content-order">
-        <span class="more-recent order-button-element">Mais recente</span>
-        <span class="biggest-price order-button-element">Maior preço</span>
-        <span class="lowest-price order-button-element">Menor preço</span>
+        <span class="more-recent order-button-element" data-value="more-recent">Mais recente</span>
+        <span class="biggest-price order-button-element" data-value="biggest-price">Maior preço</span>
+        <span class="lowest-price order-button-element" data-value="lowest-price">Menor preço</span>
       </div>
-    </aside>
-    <aside class="area-filter-mobile">
+    </div>
+    <div class="area-filter-mobile">
       <div class="header-filter-mobile">
         <span>FILTRAR</span>
         <button class="close-filter">
@@ -211,7 +213,7 @@
           <div class="input-price-range">
             <div class="element-price-range">
               <label class="check-select-price-range">
-                <input type="checkbox" class="unique-click" value="0-50" name="0-50">
+                <input type="checkbox" class="unique-click filter-price-range" value="0-50" name="0-50">
                 <span></span>
               </label>
               <span class="price-range-value">
@@ -220,7 +222,7 @@
             </div>
             <div class="element-price-range">
               <label class="check-select-price-range">
-                <input type="checkbox" class="unique-click" value="51-150" name="51-150">
+                <input type="checkbox" class="unique-click filter-price-range" value="51-150" name="51-150">
                 <span></span>
               </label>
               <span class="price-range-value">
@@ -229,7 +231,7 @@
             </div>
             <div class="element-price-range">
               <label class="check-select-price-range">
-                <input type="checkbox" class="unique-click" value="151-300" name="151-300">
+                <input type="checkbox" class="unique-click filter-price-range" value="151-300" name="151-300">
                 <span></span>
               </label>
               <span class="price-range-value">
@@ -238,7 +240,7 @@
             </div>
             <div class="element-price-range">
               <label class="check-select-price-range">
-                <input type="checkbox" class="unique-click" value="301-500" name="301-500">
+                <input type="checkbox" class="unique-click filter-price-range" value="301-500" name="301-500">
                 <span></span>
               </label>
               <span class="price-range-value">
@@ -247,7 +249,7 @@
             </div>
             <div class="element-price-range">
               <label class="check-select-price-range">
-                <input type="checkbox" class="unique-click" value="500-all" name="500">
+                <input type="checkbox" class="unique-click filter-price-range" value="500-all" name="500">
                 <span></span>
               </label>
               <span class="price-range-value">
@@ -258,11 +260,11 @@
         </section>
       </div>
       <div class="footer-buttons">
-        <button class="apply">aplicar</button>
         <button class="clear">limpar</button>
       </div>
-    </aside>
+    </div>
     <!-- END - Filter Mobile -->
+
     <!-- START - Filter -->
     <aside class="area-filter">
       <h1 class="title-filter">Blusas</h1>
@@ -420,7 +422,7 @@
         <div class="input-price-range">
           <div class="element-price-range">
             <label class="check-select-price-range">
-              <input type="checkbox" class="unique-click" value="0-50" name="0-50">
+              <input type="checkbox" class="unique-click filter-price-range" value="0-50" name="0-50">
               <span></span>
             </label>
             <span class="price-range-value">
@@ -429,7 +431,7 @@
           </div>
           <div class="element-price-range">
             <label class="check-select-price-range">
-              <input type="checkbox" class="unique-click" value="51-150" name="51-150">
+              <input type="checkbox" class="unique-click filter-price-range" value="51-150" name="51-150">
               <span></span>
             </label>
             <span class="price-range-value">
@@ -438,7 +440,7 @@
           </div>
           <div class="element-price-range">
             <label class="check-select-price-range">
-              <input type="checkbox" class="unique-click" value="151-300" name="151-300">
+              <input type="checkbox" class="unique-click filter-price-range" value="151-300" name="151-300">
               <span></span>
             </label>
             <span class="price-range-value">
@@ -447,7 +449,7 @@
           </div>
           <div class="element-price-range">
             <label class="check-select-price-range">
-              <input type="checkbox" class="unique-click" value="301-500" name="301-500">
+              <input type="checkbox" class="unique-click filter-price-range" value="301-500" name="301-500">
               <span></span>
             </label>
             <span class="price-range-value">
@@ -456,7 +458,7 @@
           </div>
           <div class="element-price-range">
             <label class="check-select-price-range">
-              <input type="checkbox" class="unique-click" value="500-all" name="500">
+              <input type="checkbox" class="unique-click filter-price-range" value="500-all" name="500">
               <span></span>
             </label>
             <span class="price-range-value">
@@ -467,9 +469,10 @@
       </section>
     </aside>
     <!-- END - Filter -->
+
     <!-- START - Result Area -->
-    <article class="area-result">
-      <section class="header-result">
+    <section class="area-result">
+      <div class="header-result">
         <div class="header-mobile">
           <h class="header-mobile-title">Blusa</h>
           <aside class="area-button-filter">
@@ -484,16 +487,18 @@
           <option value="lowest-price">Menor Preço</option>
           <option value="biggest-price">Maior Preço</option>
         </select>
-      </section>
-      <section class="element-result-area">
-        <div class="elements">
-        </div>
+      </div>
+      <div class="element-result-area">
+        <ul class="elements">
+
+        </ul>
         <button class="more-elements">Carregar mais</button>
-      </section>
-    </article>
+      </div>
+    </section>
     <!-- END - Result Area -->
   </main>
   <!-- END - Main -->
+
   <!-- START - Footer -->
   <footer class="main-footer">
     <span class="description-footer">M3: Implantação de E-commerce VTEX</span>
@@ -501,13 +506,13 @@
   <!-- END - Footer -->
 
   <!-- START - Card Confimed buy -->
-  <section class="card-buy">
-    <span>compra efetuada com sucesso</span>
-  </section>
+  <div class="card-buy">
+    <span>Produto adicionado no Carrinho</span>
+  </div>
   <!-- END - Card Confimed buy -->
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="bundle.js"></script>
 
 </html>

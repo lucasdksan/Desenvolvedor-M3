@@ -1,4 +1,4 @@
-article.area-result{
+.area-result{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,7 +7,7 @@ article.area-result{
     width: 100%;
     margin-bottom: 54px;
 
-    section.header-result{
+    .header-result{
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -113,7 +113,7 @@ article.area-result{
         }
     }
 
-    section.element-result-area{
+    .element-result-area{
         display: flex;
         flex-direction: column;
         flex: 1;
@@ -121,7 +121,7 @@ article.area-result{
         justify-content: center;
         width: 100%;
 
-        div.elements{
+        .elements{
             display: flex;
             flex-direction: row;
             align-items: flex-start;
@@ -139,23 +139,27 @@ article.area-result{
                 justify-content: center;
                 padding: 0px;
             }
+
+            &.loading,
+            &.notFound {
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    font-family: $main-font;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 28px;
+                    line-height: 44px;
+                    color: $gray;
+                    margin-bottom: 65px;
+                }
+            }
         }
 
         button.more-elements{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            padding: 8px 31px;
-            background: $blue;
-            border: none;
-
-            font-family: $main-font;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 14px;
-            line-height: 19px;
-            text-transform: uppercase;
+            @include defaultBtn($blue);
+            @include textButtons;
             color: $white;
 
             &:hover{
